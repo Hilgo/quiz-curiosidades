@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 const theme = db.theme
 
 export default function App({ Component, pageProps }) {
-  document.title = 'Quiz Curiosidades - Imersão Alura - Lucas Palma Stabile'
+  //document.title = 'Quiz Curiosidades - Imersão Alura - Lucas Palma Stabile'
   return (
     <>
       <ThemeProvider theme={theme}>
