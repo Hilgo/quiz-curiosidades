@@ -36,9 +36,25 @@ export default function App({ Component, pageProps }) {
     // eslint-disable-next-line react/jsx-filename-extension
     <>
       <Head>
+        <title>Quiz Curiosidades - Lucas Palma Stabile - Imersão React Alura</title>
+        {/* Primary Meta Tags */}
         <title>Quiz Curiosidades - Lucas Palma Stabile</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="title" content="Quiz Curiosidades - Lucas Palma Stabile" />
+        <meta name="description" content="Quiz sobre curiosidades feito em React" />
+
+        {/*  Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:title" content="Quiz Curiosidades - Lucas Palma Stabile" />
+        <meta property="og:description" content="Quiz sobre curiosidades feito em React" />
+        <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png/" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:title" content="Quiz Curiosidades - Lucas Palma Stabile" />
+        <meta property="twitter:description" content="Quiz sobre curiosidades feito em React" />
+        <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet" />
       </Head>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
@@ -18,16 +19,38 @@ const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [nome, setarNome] = React.useState('');
+
   return (
     <>
       <QuizBackground alt="Imagem de fundo cheio de pontos de interrogação" backgroundImage={db.bg}>
         <QuizContainer>
           <Widget>
             <Widget.Header>
-              <h1>Título1</h1>
+              <h1>Curiosidades</h1>
             </Widget.Header>
             <Widget.Content>
-              <p>parágrafo1</p>
+              <form onSubmit={function EnvioFormulario(event) {
+                event.preventDefault();
+
+                router.push(`/quiz?nome=${nome}`);
+              // router manda para próxima página
+              }}
+              >
+                <input
+                  onChange={function AlterarNome(evento) {
+                  // Nome
+                    setarNome(evento.target.value);
+                  }}
+                  placeholder="Diga seu nome para começar a jogar"
+                />
+                <button type="submit" disabled={nome.length === 0}>
+                  Jogar
+                  {' '}
+                  {nome}
+                </button>
+              </form>
             </Widget.Content>
           </Widget>
           <Widget>
