@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import db from '../db.json'
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
-import Head from 'next/head'
+import React from 'react';
+import styled from 'styled-components';
+import db from '../db.json';
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
 
 const QuizContainer = styled.div`
   width: 100%;
@@ -20,12 +20,7 @@ const QuizContainer = styled.div`
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Quiz Curiosidades - Lucas Palma Stabile</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <QuizBackground alt='Imagem de fundo cheio de pontos de interrogação' backgroundImage={db.bg}>
+      <QuizBackground alt="Imagem de fundo cheio de pontos de interrogação" backgroundImage={db.bg}>
         <QuizContainer>
           <Widget>
             <Widget.Header>
@@ -45,8 +40,8 @@ export default function Home() {
           </Widget>
           <Footer />
         </QuizContainer>
-        <GitHubCorner projectUrl='https://github.com/Hilgo/quiz-curiosidades' />
+        <GitHubCorner projectUrl="https://github.com/Hilgo/quiz-curiosidades" />
       </QuizBackground>
     </>
-  )
+  );
 }

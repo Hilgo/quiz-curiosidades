@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Widget = styled.div`
   margin-top: 24px;
@@ -46,4 +46,4 @@ Widget.Content = styled.div`
   }
 `;
 
-export default Widget
+export default Widget;
